@@ -1,3 +1,9 @@
+/*
+// Project Name: Ganesh Naykawadi's Portfolio Website.
+// Date Created: 09 Dec, 2020.
+// Author: Ganesh B. Naykawadi.
+*/
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
