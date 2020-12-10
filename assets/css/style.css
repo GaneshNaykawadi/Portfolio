@@ -252,7 +252,8 @@ img {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 287px;
+    z-index: -1;
+    width: 287px; 
 }
 
 /* typewriter text effect */
