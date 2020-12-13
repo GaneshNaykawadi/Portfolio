@@ -134,6 +134,7 @@ function sendEmail(event) {
         event.preventDefault();
         Email.send({
             client.UseDefaultCredentials = false;
+            client.EnableSsl = true;
             SecureToken: "54960fc6-d298-4ba8-b748-a00ca87be20d",
             To: 'ganeshnaykawadi@gmail.com',
             From: from,
