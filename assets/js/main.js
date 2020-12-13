@@ -133,7 +133,7 @@ function sendEmail(event) {
         debugger;
         event.preventDefault();
         Email.send({
-            SecureToken: "40c34c38-2abe-4f66-968a-a8996ac21919",
+            SecureToken: "94463ACD45CAF41AB86EF5A02140134E9E558750D18A475CEA276C12CEEBB8ECBB632D564F36C1584723B93552B85989",
             To: 'ganeshnaykawadi@gmail.com',
             From: from,
             Subject: subject,
