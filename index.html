@@ -18,6 +18,9 @@
     <!-- =====BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--===== SmtpJS - send mail from JavaScript =====-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <title>Ganesh Naykawadi's Portfolio</title>
     <link rel="shortcut icon" href="assets/img/title-icon.png" />
 </head>
@@ -34,7 +37,6 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -195,12 +197,12 @@
             </div>
 
             <div class="contact__container bd-grid">
-                <form action="#" method="post" onsubmit="return check();" class="contact__form">
+                <form action="https://formspree.io/f/xvovwwjd" method="post" onsubmit="return check();" class="contact__form">
                     <p class="skills__text"><i>If you have any great project idea or exciting job opportunity then feel free to contact me </i></p>
                     <input type="text" placeholder="your email address" id="txtfrom" class="contact__input">
                     <input type="mail" placeholder="subject" id="txtSubject" class="contact__input">
                     <textarea cols="0" rows="10" id="txaMessage" placeholder="send the message" class="contact__input"></textarea>
-                    <a href="#" class="button" onclick="sendEmail(event)"><i class='bx bxs-send'></i>&nbsp; Send</a>
+                    <a href="#contact" class="button" onclick="sendEmail()"><i class='bx bxs-send'></i>&nbsp; Send</a>
                 </form>
             </div>
         </section>
@@ -223,9 +225,5 @@
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
 
-    <!--===== SmtpJS - send mail from JavaScript =====-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
 </body>
-
 </html>
