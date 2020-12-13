@@ -4,7 +4,6 @@
 // Author: Ganesh B. Naykawadi.
 */
 
-
 /*===== GOOGLE FONTS CDN =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
@@ -156,7 +155,7 @@ img {
         position: fixed;
         top: var(--header-height);
         right: -100%;
-        width: 60%;
+        width: 50%;
         height: 100%;
         padding: 2rem;
         background-color: var(--second-color);
@@ -437,13 +436,11 @@ img {
 
 /* ===== CONTACT SECTION =====*/
 .contact__input {
-    width: 100%;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-semi);
+    width: 90%;
     outline: none;
     border-radius: 0.5rem;
-    border: 2px solid #D3D3D3;
-    padding: 0.7rem;
+    border: 1.5px solid #D3D3D3;
+    padding: 0.6rem;
     margin-bottom: var(--mb-2);
     */
 }
