@@ -4,6 +4,7 @@
 // Author: Ganesh B. Naykawadi.
 */
 
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -121,3 +122,28 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+// function to send mail through js.
+function sendEmail(event) {
+
+    let from = document.getElementById("txtfrom").value;
+    let subject = document.getElementById("txtSubject").value;
+    let message = document.getElementById("txaMessage").value;
+    if (from != null && subject != null && message != null) {
+        debugger;
+        event.preventDefault();
+        Email.send({
+            SecureToken: "40c34c38-2abe-4f66-968a-a8996ac21919",
+            To: 'ganeshnaykawadi@gmail.com',
+            From: from,
+            Subject: subject,
+            Body: message
+        }).then(function (response) {
+            console.log(response);
+            if (response == "ok")
+                alert("Email Sent Successfully!");
+            else
+                alert("Something Went wrong!");
+        });
+    }
+}
