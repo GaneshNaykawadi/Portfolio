@@ -133,10 +133,10 @@ function sendEmail(event) {
         debugger;
         event.preventDefault();;
         Email.send({
-            //SecureToken: "dea0a291-2e24-45a9-a1b6-88d151b9c4fc",
-            Host: "smtp.gmail.com",
-            Username: "ganeshnaykawadi@gmail.com",
-            Password: "Developer@2k20",
+            SecureToken: "dea0a291-2e24-45a9-a1b6-88d151b9c4fc",
+            //Host: "smtp.gmail.com",
+            //Username: "ganeshnaykawadi@gmail.com",
+            //Password: "Developer@2k20",
             To: 'ganeshnaykawadi@gmail.com',
             From: from,
             Subject: subject,
