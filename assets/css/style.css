@@ -162,6 +162,10 @@ img {
         background-color: var(--second-color);
         transition: .47s;
     }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .nav__item {
@@ -420,21 +424,17 @@ img {
 .card {
     width: 100%;
     max-width: 50rem;
-    min-width: 200px;
-    height: 25rem;
+    min-height: 22rem;
     background-color: #292929;
-    margin: 10px;
     border-radius: 4px;
-    box-shadow: 3px 3px 5px 6px #ccc;
-    font-size: 16px;
+    box-shadow: 3px 3px 5px 7px #ccc;
     transition: all 0.5s ease-in;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    transition: all 0.3s ease-in;
+    transition: all 0.7s ease-in;
 }
 
 .card .title {
@@ -443,7 +443,7 @@ img {
     text-align: center;
     margin-top: 30px;
     color: white;
-    font-weight: 600;
+    font-weight: var(--font-semi);
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -460,7 +460,7 @@ img {
     letter-spacing: 2px;
     opacity: 0;
     max-height: 0;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease-in;
 }
 
 .card:hover {
@@ -468,7 +468,7 @@ img {
 }
 
 .card:hover .text {
-    transition: all 0.5s ease-in;
+    transition: all 0.7s ease-in;
     opacity: 1;
     max-height: 70%;
 }
