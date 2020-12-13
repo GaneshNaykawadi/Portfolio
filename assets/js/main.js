@@ -124,29 +124,31 @@ document.addEventListener("DOMContentLoaded", function () { // On DOM Load initi
 });
 
 // function to send mail through js.
-function sendEmail(event) {
+function sendEmail() {
 
-    let from = document.getElementById("txtfrom").value;
-    let subject = document.getElementById("txtSubject").value;
-    let message = document.getElementById("txaMessage").value;
+    let from = document.getElementById("txtfrom");
+    let subject = document.getElementById("txtSubject");
+    let message = document.getElementById("txaMessage");
+
     if (from != null && subject != null && message != null) {
         debugger;
-        event.preventDefault();;
         Email.send({
-            SecureToken: "dea0a291-2e24-45a9-a1b6-88d151b9c4fc",
-            //Host: "smtp.gmail.com",
-            //Username: "ganeshnaykawadi@gmail.com",
-            //Password: "Developer@2k20",
+            Host: "smtp.gmail.com",
+            Username: "portfolio.ganesh@gmail.com",
+            Password: "yjjujmbbmxhgwrqu",
             To: 'ganeshnaykawadi@gmail.com',
-            From: from,
-            Subject: subject,
-            Body: message
+            From: from.value,
+            Subject: subject.value,
+            Body: message.value
         }).then(function (response) {
             console.log(response);
-            if (response == "ok")
+            if (response == "OK")
                 alert("Email Sent Successfully!");
             else
                 alert("Something Went wrong!");
         });
     }
+
+    //clear the form fields
+    from.value = "", subject.value = "", message.value = "";
 }
