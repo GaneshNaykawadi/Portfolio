@@ -1,226 +1,149 @@
-<!-- 
+/*
 // Project Name: Ganesh Naykawadi's Portfolio Website.
 // Date Created: 09 Dec, 2020.
 // Author: Ganesh B. Naykawadi.
--->
-<!DOCTYPE html>
-<html lang="en">
+*/
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="author" description="Ganesh Naykawadi" />
-    <meta name="keywords" description="Resume, Ganesh Naykawadi, Software Developer, Web Developer" />
-    <meta name="application-name" description="Ganesh Naykawadi's Portfolio" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.min.css">
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+/*===== MENU SHOW =====*/
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
 
-    <title>Ganesh Naykawadi's Portfolio</title>
-    <link rel="shortcut icon" href="assets/img/title-icon.png" />
-</head>
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show')
+        })
+    }
+}
+showMenu('nav-toggle', 'nav-menu')
 
-<body>
-    <!--===== HEADER Section=====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo"><i class='bx bxs-user-circle skills__icon'></i><b>Portfolio</b></a>
-            </div>
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
+function linkAction() {
+    /*Active link*/
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
+    /*Remove menu mobile*/
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
-    <main class="l-main">
-        <!--===== HOME Section =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h2 class="home__title">Hi,<br>I am </h2>
-                <div class="container">
-                    <h3 class="home__title"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-                </div>
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
 
-                <a href="./assets/img/Ganesh%20Naykawadi%20(Latest%20Resume).pdf" title="click here download my resume" download class="button"><i class='bx bxs-download'></i>&nbsp; Resume</a>
-            </div>
+/*SCROLL HOME*/
+sr.reveal('.home__title', {});
+sr.reveal('.button', {
+    delay: 200
+});
+sr.reveal('.home__img', {
+    delay: 400
+});
+sr.reveal('.home__social-icon', {
+    interval: 200
+});
 
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/ganeshnaykawadi" class="home__social-icon" target="_blank" title="Linkedin profile"><i class='bx bxl-linkedin skills__icon'></i></a>
-                <a href="https://github.com/GaneshNaykawadi" class="home__social-icon" target="_blank" title="Github profile"><i class='bx bxl-github skills__icon'></i></a>
-            </div>
+/*SCROLL ABOUT*/
+sr.reveal('.about__img', {});
+sr.reveal('.about__subtitle', {
+    delay: 400
+});
+sr.reveal('.about__text', {
+    delay: 400
+});
 
-            <div class="home__img">
-                <img src="assets/img/introduction-circle.png" alt="Landing Page Image">
-            </div>
-        </section>
+/*SCROLL SKILLS*/
+sr.reveal('.skills__subtitle', {});
+sr.reveal('.skills__text', {});
+sr.reveal('.skills__data', {
+    interval: 200
+});
+sr.reveal('.skills__img', {
+    delay: 600
+});
 
-        <!--===== ABOUT Section =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
+/*SCROLL WORK*/
+sr.reveal('.work__img', {
+    interval: 200
+});
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="Ganesh avatar">
-                </div>
+/*SCROLL CONTACT*/
+sr.reveal('.contact__input', {
+    interval: 200
+});
 
-                <div>
-                    <h2 class="about__subtitle">I am Ganesh</h2>
-                    <p class="about__text"><i>I am a passionate software developer based in Pune, Maharashtra. I have over 2 years of software industry experience. I had graduated from MIT College, Pune. I would love to build easy to use, scalable applications that can solve the daily problems of peoples.</i></p>
-                </div>
-            </div>
-        </section>
 
-        <!--===== SKILLS Section =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+//cursor text effect
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text"><i>Find out what you like doing best and get someone to pay you for doing it.</i></p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
+const textArray = ["Ganesh Naykawadi.", "Web Designer!", "Software Developer!", "Freelancer!", "Lifelong Learner!"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+    }
+}
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-bootstrap skills__icon'></i>
-                            <span class="skills__name">Bootstrap</span>
-                        </div>
-                        <div class="skills__bar skills__bootstrap">
+function erase() {
+    if (charIndex > 0) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+    }
+}
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JavaScript</span>
-                        </div>
-                        <div class="skills__bar skills__js">
+document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">67%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-microsoft skills__icon'></i>
-                            <span class="skills__name">.NET Framework</span>
-                        </div>
-                        <div class="skills__bar skills__dotnet">
+// function to send mail through js.
+function sendEmail(event) {
 
-                        </div>
-                        <div>
-                            <span class="skills__percentage">70%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/skill.jpg" alt="skills" class="skills__img">
-                </div>
-            </div>
-        </section>
-
-        <!--===== WORK Section =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
-
-            <div class="work__container bd-grid">
-                <div class="work__img">
-                    <img src="assets/img/work1.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work3.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
-                </div>
-                <div class="work__img">
-                    <img src="assets/img/work6.jpg" alt="">
-                </div>
-            </div>
-        </section>
-
-        <!--===== CONTACT Section =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="">
-
-            </div>
-
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <p class="skills__text"><i>If you have any great project idea or exciting job opportunity then feel free to contact me </i></p>
-                    <input type="text" placeholder="+91 7507336238" readonly="true" class="contact__input">
-                    <input type="mail" placeholder="ganeshnaykawadi@gmail.com" readonly="true" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" placeholder="send the message" class="contact__input"></textarea>
-                    <a href="#" class="button"><i class='bx bxs-send'></i>&nbsp; Send</a>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!--===== FOOTER Section =====-->
-    <footer class="footer">
-        <p class="footer__title">Social Connect</p>
-        <div class="footer__social">
-            <a href="https://www.instagram.com/ganesh_naykawadi" target="_blank" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.facebook.com/ganeshnaykawadi.07" target="_blank" class="footer__icon"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.youtube.com/channel/UCyYqmPRga8USQ162kIt-q3w" target="_blank" class="footer__icon"><i class='bx bxl-youtube'></i></a>
-        </div>
-        <p>&#169; 2020. copyright all right reserved.</p>
-    </footer>
-
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.min.js"></script>
-</body>
-</html>
+    let from = document.getElementById("txtfrom").value;
+    let subject = document.getElementById("txtSubject").value;
+    let message = document.getElementById("txaMessage").value;
+    if (from != null && subject != null && message != null) {
+        debugger;
+        event.preventDefault();
+        Email.send({
+            SecureToken: "40c34c38-2abe-4f66-968a-a8996ac21919",
+            To: 'ganeshnaykawadi@gmail.com',
+            From: from,
+            Subject: subject,
+            Body: message
+        }).then(function (response) {
+            console.log(response);
+            if (response == "ok")
+                alert("Email Sent Successfully!");
+            else
+                alert("Something Went wrong!");
+        });
+    }
+}
