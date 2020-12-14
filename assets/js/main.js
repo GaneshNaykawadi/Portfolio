@@ -4,7 +4,6 @@
 // Author: Ganesh B. Naykawadi.
 */
 
-
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -31,7 +30,6 @@ function linkAction() {
     navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
-
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 
@@ -84,7 +82,6 @@ sr.reveal('.contact__input', {
     interval: 200
 });
 
-
 /*===== TYPEWRITER TEXT EFFECT/ TYPING EFFECT =====*/
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
@@ -125,7 +122,6 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
-
 
 /*===== SMTPJS - SEND MAIL THROUGH JS =====*/
 function sendEmail() {
