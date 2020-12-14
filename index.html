@@ -8,18 +8,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="author" description="Ganesh Naykawadi" />
     <meta name="keywords" description="Resume, Ganesh Naykawadi, Software Developer, Web Developer" />
     <meta name="application-name" description="Ganesh Naykawadi's Portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <!-- ===== External CSS ===== -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 
-    <!-- =====BOX ICONS ===== -->
+    <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--===== SmtpJS - send mail from JavaScript =====-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <title>Ganesh Naykawadi's Portfolio</title>
     <link rel="shortcut icon" href="assets/img/title-icon.png" />
@@ -82,7 +81,7 @@
 
                 <div>
                     <h2 class="about__subtitle">I am Ganesh</h2>
-                    <p class="about__text"><i>I am a passionate software developer based in Pune, Maharashtra. I have over 2 years of software industry experience. I had graduated from MIT College, Pune. I love to build easy to use, scalable applications that can make life much more easier. I always try to learn something new that will make me better version of myself.</i></p>
+                    <p class="about__text"><i>I am a passionate software developer based in Pune, Maharashtra. I have over 2 years of software industry experience. I had graduated from MIT College, Pune. I would love to build easy to use, scalable applications that can make life much more easier. I always try to learn something new that will make me better version of myself.</i></p>
                 </div>
             </div>
         </section>
@@ -202,7 +201,7 @@
             </div>
 
             <div class="contact__container bd-grid">
-                <form action="https://formspree.io/f/xvovwwjd" method="post" onsubmit="return check();" class="contact__form">
+                <form action="#contact" method="post" onsubmit="return check();" class="contact__form">
                     <p class="skills__text"><i>If you have any great project idea or exciting job opportunity then feel free to contact me </i></p>
                     <input type="text" placeholder="your email address" id="txtfrom" class="contact__input">
                     <input type="mail" placeholder="subject" id="txtSubject" class="contact__input">
@@ -227,7 +226,12 @@
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <!--===== SmtpJS - send mail from JavaScript =====-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.min.js"></script>
 
-</body></html>
+</body>
+
+</html>
