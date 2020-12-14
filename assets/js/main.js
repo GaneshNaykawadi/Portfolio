@@ -32,11 +32,13 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+
 /*===== SCROLL REVEAL ANIMATION =====*/
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: 2000,
+    duration: 1200,
     reset: true
 });
 
@@ -67,13 +69,14 @@ sr.reveal('.skills__text', {});
 sr.reveal('.skills__data', {
     interval: 200
 });
+
 sr.reveal('.skills__img', {
-    delay: 600
+    interval: 600
 });
 
 /*SCROLL WORK*/
-sr.reveal('.work__img', {
-    interval: 200
+sr.reveal('.card', {
+    interval: 300
 });
 
 /*SCROLL CONTACT*/
@@ -82,7 +85,7 @@ sr.reveal('.contact__input', {
 });
 
 
-//cursor text effect
+/*===== TYPEWRITER TEXT EFFECT/ TYPING EFFECT =====*/
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
@@ -123,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function () { // On DOM Load initi
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-// function to send mail through js.
+
+/*===== SMTPJS - SEND MAIL THROUGH JS =====*/
 function sendEmail() {
 
     let from = document.getElementById("txtfrom");
@@ -149,6 +153,6 @@ function sendEmail() {
         });
     }
 
-    //clear the form fields
+    /*===== CLEAR THE FORM FIELDS =====*/
     from.value = "", subject.value = "", message.value = "";
 }
