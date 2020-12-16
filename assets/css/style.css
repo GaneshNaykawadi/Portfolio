@@ -4,6 +4,7 @@
 // Author: Ganesh B. Naykawadi.
 */
 
+
 /*===== GOOGLE FONTS CDN =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
@@ -22,14 +23,14 @@
 /*===== FONTS =====*/
 :root {
     --body-font: 'Poppins', sans-serif !important;
-    --big-font-size: 2rem;
+    --big-font-size: 1.8rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: 0.938rem;
 }
 
 @media screen and (min-width: 768px) {
     :root {
-        --big-font-size: 3.5rem;
+        --big-font-size: 3rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
     }
@@ -62,7 +63,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-y: scroll;
 }
 
 body {
@@ -166,6 +166,7 @@ img {
     .card {
         margin-bottom: 1.5rem;
     }
+
 }
 
 .nav__item {
@@ -226,21 +227,18 @@ img {
 }
 
 .home__data {
-    align-self: center;
+    padding-top: 1.5rem;
+    align-self: flex-start;
 }
 
 .home__title {
     font-size: var(--big-font-size);
 }
 
-.home__title-color {
-    color: var(--first-color);
-}
-
 .home__social {
     display: flex;
     justify-content: flex-start;
-    justify-items: baseline;
+    justify-items: flex-start;
     flex-direction: column-reverse;
 }
 
@@ -249,6 +247,7 @@ img {
     margin-bottom: var(--mb-2);
     font-size: 2rem;
     color: var(--first-color);
+    padding-bottom: 1rem;
 }
 
 .home__social-icon:hover {
@@ -265,12 +264,12 @@ img {
 
 /* typewriter text effect */
 .home .container {
-    padding-bottom: var(--mb-6);
+    padding-bottom: var(--mb-4);
     display: flex;
 }
 
 .container h3 {
-    font-size: 3rem;
+    font-size: 2.1rem;
     padding: 0.5rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
@@ -468,7 +467,7 @@ img {
 
 .card:hover {
     height: 25rem;
-    box-shadow: 8px 64px 32px 32px #5b4e4b;
+    box-shadow: 8px 22px 16px 0px #5b4e4b;
     z-index: 2;
 }
 
@@ -598,18 +597,19 @@ img {
     }
 
     .home__data {
-        align-self: flex-end;
+        padding-top: 6rem;
+        align-self: flex-start;
     }
 
     .home__social {
         padding-top: 0;
-        padding-bottom: 2.5rem;
+        margin-bottom: 2rem;
         flex-direction: row;
         align-self: flex-end;
     }
 
     .home__social-icon {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
         margin-right: var(--mb-4);
     }
 
@@ -635,6 +635,11 @@ img {
         column-gap: 2rem;
     }
 
+    .card:hover {
+        box-shadow: 8px 64px 32px 32px #5b4e4b;
+        z-index: 2;
+    }
+
     .contact__form {
         width: 50%;
     }
@@ -650,7 +655,19 @@ img {
         margin-right: auto;
     }
 
+    .home__data {
+        margin-top: 0;
+        padding-left: var(--mb-2);
+        align-self: flex-end;
+    }
+
+    .container h3 {
+        font-size: 3.5rem;
+    }
+
+
     .home__img {
-        right: 10%;
+        top: 25%;
+        right: 5%;
     }
 }
