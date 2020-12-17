@@ -23,14 +23,14 @@
 /*===== FONTS =====*/
 :root {
     --body-font: 'Poppins', sans-serif !important;
-    --big-font-size: 1.8rem;
+    --big-font-size: 2.2rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: 0.938rem;
 }
 
 @media screen and (min-width: 768px) {
     :root {
-        --big-font-size: 3rem;
+        --big-font-size: 2.9rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
     }
@@ -167,6 +167,14 @@ img {
         margin-bottom: 1.5rem;
     }
 
+    .home__social {
+        padding-bottom: 3.5rem;
+    }
+
+    .home__img {
+        bottom: 5%;
+    }
+
 }
 
 .nav__item {
@@ -245,7 +253,7 @@ img {
 .home__social-icon {
     width: max-content;
     margin-bottom: var(--mb-2);
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: var(--first-color);
     padding-bottom: 1rem;
 }
@@ -269,7 +277,7 @@ img {
 }
 
 .container h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     padding: 0.5rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
@@ -601,6 +609,10 @@ img {
         align-self: flex-start;
     }
 
+    .container h3 {
+        font-size: 3.5rem;
+    }
+
     .home__social {
         padding-top: 0;
         margin-bottom: 2rem;
@@ -657,17 +669,11 @@ img {
 
     .home__data {
         margin-top: 0;
-        padding-left: var(--mb-2);
         align-self: flex-end;
     }
 
-    .container h3 {
-        font-size: 3.5rem;
-    }
-
-
     .home__img {
-        top: 25%;
+        top: 30%;
         right: 5%;
     }
 }
