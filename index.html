@@ -1,4 +1,4 @@
-<!-- 
+<!--
 // Project Name: Ganesh Naykawadi's Portfolio Website.
 // Date Created: 09 Dec, 2020.
 // Author: Ganesh B. Naykawadi.
@@ -10,29 +10,29 @@
     <meta charset="UTF-8">
     <meta name="author" description="Ganesh Naykawadi" />
     <meta name="keywords" description="Resume, Ganesh Naykawadi, Software Developer, Web Developer" />
-    <meta name="application-name" description="Ganesh Naykawadi's Portfolio" />
+    <meta name="description" content="Ganesh Naykawadi portfolio website.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
 
     <!-- ===== External CSS ===== -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 
-    <!-- ===== BOX ICONS ===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== BOX ICONS CDN ===== -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- ===== FONT OWESOME ICONS CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Ganesh Naykawadi's Portfolio</title>
     <link rel="shortcut icon" href="assets/img/title-icon.png" />
 </head>
 
-<body>
+<body onload="getCurrentYear()">
     <!--===== HEADER Section=====-->
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo"><i class='bx bxs-user-circle skills__icon'></i><b>Portfolio</b></a>
+                <a href="#" class="nav__logo"><i class='bx bxs-user-circle logo__icon bounce'></i><b>Portfolio</b></a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
@@ -60,31 +60,31 @@
                     <h3 class="home__title"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
                 </div>
 
-                <a href="./assets/img/Ganesh%20Naykawadi%20(Latest%20Resume).pdf" target="_blank" title="Download Resume" download class="button"><i class='bx bxs-download'></i>&nbsp; Resume</a>
+                <a href="./assets/img/Ganesh%20Naykawadi%20(Latest%20Resume).pdf" rel="noopener" target="_blank" title="click here to download my resume" download class="button button-hover"><i class='bx bxs-download'></i>&nbsp; Resume</a>
             </div>
 
             <div class="home__social">
-                <a href="https://github.com/GaneshNaykawadi" target="_blank" class="" title="Visit Github Profile"><i class="fab fa-github home__social-icon"></i></a>
-                <a href="https://www.hackerrank.com/Ganesh_Naykawadi" target="_blank" title="Visit Hackerrank Profile"><i class="fab fa-hackerrank home__social-icon"></i></a>
+                <a href="https://github.com/GaneshNaykawadi" rel="noopener" target="_blank" title="View Github profile" class="bounce"><i class="fa-brands fa-github home__social-icon"></i></a>
+                <a href="https://www.hackerrank.com/Ganesh_Naykawadi" rel="noopener" target="_blank" title="View Hackerrank profile" class="bounce"><i class="fa-brands fa-hackerrank home__social-icon"></i></a>
             </div>
 
             <div class="home__img">
-                <img src="assets/img/introduction-circle.png" alt="Landing Page Image">
+                <img src="assets/img/introduction-circle.webp" alt="Landing Page Image" loading="eager">
             </div>
         </section>
 
         <!--===== ABOUT Section =====-->
-        <section class="about section " id="about">
+        <section class="about section" id="about">
             <h2 class="section-title">About</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="Ganesh avatar">
+                    <img src="assets/img/about.webp" alt="Ganesh avatar" loading="Lazy">
                 </div>
 
                 <div>
                     <h2 class="about__subtitle">I am Ganesh</h2>
-                    <p class="about__text"><i>I am a passionate software developer based in Pune, Maharashtra. I have over 2 years of software industry experience. I had graduated from MIT College, Pune. I would love to build easy to use, scalable applications that can make life much more easier. I always try to learn something new that will make me better version of myself.</i></p>
+                    <p class="about__text"><i>I am a passionate software developer based in Pune, Maharashtra. I have over 3 years of software industry experience. I had graduated from MIT College, Pune. I would love to build easy to use, scalable applications that can make life much more easier. I always try to learn something new that will make me better version of myself.</i></p>
                 </div>
             </div>
         </section>
@@ -106,7 +106,7 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">80%</span>
+                            <span class="skills__percentage">90%</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -118,7 +118,7 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">75%</span>
+                            <span class="skills__percentage">80%</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -142,7 +142,7 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">67%</span>
+                            <span class="skills__percentage">70%</span>
                         </div>
                     </div>
                     <div class="skills__data">
@@ -154,13 +154,13 @@
 
                         </div>
                         <div>
-                            <span class="skills__percentage">70%</span>
+                            <span class="skills__percentage">77%</span>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <img src="assets/img/skill.jpg" alt="skills" class="skills__img">
+                    <img src="assets/img/skill.webp" alt="skills" class="skills__img" loading="Lazy">
                 </div>
             </div>
         </section>
@@ -170,9 +170,18 @@
             <h2 class="section-title">Work</h2>
 
             <div class="work__container bd-grid">
+
                 <div class="card">
                     <div class="imgbox">
-                        <img src="assets/img/blog.jpg" alt="Blogging Website">
+                        <img src="assets/img/SearchLab.webp" alt="Search Diagnostic Center" loading="Lazy">
+                    </div>
+                    <p class="title">Diagnostic Center Website</p>
+                    <p class="text"><b>Technologies Used:</b> HTML/CSS/JavaScript<br> This project is a static website for <a id="searchlink" href="https://www.searchdiagnostic.in" rel="noopener" target="_blank">Search Diagnostic Center</a>.</p>
+                </div>
+
+                <div class="card">
+                    <div class="imgbox">
+                        <img src="assets/img/blog.webp" alt="Blogging Website" loading="Lazy">
                     </div>
                     <p class="title">Blogging Website</p>
                     <p class="text"><b>Technologies Used:</b> C#, ASP.NET MVC, WEB API 2.0, MS SQL Server.<br>This is technical blogging website used for sharing blogs related to computer science.</p>
@@ -180,18 +189,10 @@
 
                 <div class="card">
                     <div class="imgbox">
-                        <img src="assets/img/kitten%20commander.jpg" alt="kitten commander game">
+                        <img src="assets/img/kitten-commander.webp" alt="kitten commander game" loading="Lazy">
                     </div>
                     <p class="title">Kitten Commander Game</p>
                     <p class="text"><b>Technologies Used:</b> Python - (Pygame module).<br>This is fun-loving game craeted using python where kitten commander shoot down the enemies.</p>
-                </div>
-
-                <div class="card">
-                    <div class="imgbox">
-                        <img src="assets/img/VFS.jpg" alt="VFS">
-                    </div>
-                    <p class="title">Virtual File System (VFS)</p>
-                    <p class="text"><b>Technologies Used:</b> C++.<br> This project is mini version of Operating system used for managing file operations.</p>
                 </div>
             </div>
         </section>
@@ -206,10 +207,10 @@
             <div class="contact__container bd-grid">
                 <form action="#contact" method="post" onsubmit="return check();" class="contact__form">
                     <p class="skills__text"><i>If you have any great project idea or exciting job opportunity then feel free to contact me </i></p>
-                    <input type="text" placeholder="Your Email" id="txtfrom" class="contact__input">
-                    <input type="mail" placeholder="Subject" id="txtSubject" class="contact__input">
-                    <textarea cols="0" rows="10" id="txaMessage" placeholder="Type Your Message.." class="contact__input"></textarea>
-                    <a href="#contact" class="button" onclick="sendEmail()"><i class='bx bxs-send'></i>&nbsp; Send</a>
+                    <input type="email" placeholder="Your Email" id="txtFrom" class="contact__input" required />
+                    <input type="text" placeholder="Subject" id="txtSubject" class="contact__input" required />
+                    <textarea cols="0" rows="10" id="txaMessage" placeholder="Type Your Message.." class="contact__input" required></textarea>
+                    <a href="#contact" class="button button-hover" onclick="sendEmail()"><i class='bx bxs-send'></i>&nbsp; Send</a>
                 </form>
             </div>
         </section>
@@ -219,21 +220,31 @@
     <footer class="footer">
         <p class="footer__title">Social Connect</p>
         <div class="footer__social">
-            <a href="https://www.facebook.com/ganeshnaykawadi.07" target="_blank" title="connect Facebook" class="footer__icon"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="https://www.linkedin.com/in/ganeshnaykawadi/" target="_blank" title="connect Linkedin" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.instagram.com/ganesh_naykawadi" target="_blank" title="connect Instagram" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+          <ul class="">
+            <li><a href="https://www.facebook.com/ganeshnaykawadi.07" rel="noopener" target="_blank" title="connect Facebook" class="footer__icon bounce"><i class='bx bxl-facebook-circle'></i></a></li>
+            <li><a href="https://www.instagram.com/ganesh_naykawadi" rel="noopener" target="_blank" title="connect Instagram" class="footer__icon bounce"><i class='bx bxl-instagram'></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=7507336238" rel="noopener" target="_blank" title="connect whatsApp" class="footer__icon bounce"><i class='bx bxl-whatsapp'></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ganeshnaykawadi/" rel="noopener" target="_blank" title="connect Linkedin" class="footer__icon bounce"><i class='bx bxl-linkedin'></i></a></li>
+          </ul>
+
         </div>
-        <p>&#169; 2020. copyright all right reserved.</p>
+        <p>&#169; <span id="cprYear"></span>. copyright all rights reserved.</p>
     </footer>
 
+    <!--===== Jquery =====-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <!--===== NotifyJS - Notification display to user. =====-->
+    <script src="assets/js/notify.min.js" async></script>
 
     <!--===== SmtpJS - send mail from JavaScript =====-->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js" async></script>
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.min.js"></script>
-
 </body>
+
 </html>

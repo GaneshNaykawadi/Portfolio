@@ -1,0 +1,14 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+Disallow: /database/
+Disallow: /_private/
+Disallow: /_vti_bin/
+Disallow: /_vti_cnf/
+Disallow: /_vti_log/
+Disallow: /_vti_pvt/
+Disallow: /_vti_txt/
+
+Sitemap: https://www.ganeshnaykawadi.online/sitemap.xml
